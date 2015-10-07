@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#000101"
+    tools:context=".EditorLandscape">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#27e508"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center"
+        android:text="@string/dummy_content" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <SlidingDrawer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:content="@+id/note_drawer"
+            android:handle="@+id/handle_notebox"
+            android:id="@+id/slidingDrawer"
+            android:layout_gravity="right|top"
+            android:background="@android:color/transparent"
+            android:topOffset="100dp">
+
+            <LinearLayout
+                android:id="@+id/note_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                style="@style/Theme.AppCompat.Light.DarkActionBar"
+                android:background="@color/foreground_material_dark"
+                android:focusableInTouchMode="false"
+                android:nestedScrollingEnabled="true"
+                android:scrollIndicators="bottom"
+                android:visibility="visible">
+
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/horizontalScrollView_notes" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/notecontainer">
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView2"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView3"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView4"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView6"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView7"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView8"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView9"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                        <ImageView
+                            android:layout_width="170dp"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView5"
+                            android:contentDescription="@string/note1"
+                            android:src="@android:drawable/ic_lock_silent_mode_off"
+                            android:background="#234bba"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/handle_notebox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/note_drawer_title" />
+        </SlidingDrawer>
+    </FrameLayout>
+
+</FrameLayout>

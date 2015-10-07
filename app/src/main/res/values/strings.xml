@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Retro Studio</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">Tracks View</string>
+    <string name="dummy_note">Note</string>
+    <string name="note_drawer_title">Notes</string>
+    <string name="note1">note_1</string>
+</resources>
