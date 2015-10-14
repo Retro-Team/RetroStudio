@@ -4,12 +4,16 @@ import com.retroteam.studio.retrostudio.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import junit.framework.Test;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -45,6 +49,7 @@ public class EditorLandscape extends Activity {
      * The instance of the {@link SystemUiHider} for this activity.
      */
     private SystemUiHider mSystemUiHider;
+    private ImageView image1;
 
     //private int[] images = {R.drawable.dd1};
 
@@ -118,6 +123,29 @@ public class EditorLandscape extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         //findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+
+        // assign an onclick listener for the first image, let it play a sound
+
+        this.image1 = (ImageView)this.findViewById(R.id.imageView);
+        //this.image1.setImageResource(R.drawable.NAMEOFIMAGE);
+        this.image1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //our implementation of "tap this to play the noise it makes goes here"
+                //this.image1.playSound();
+                MediaPlayer mp = MediaPlayer.create(EditorLandscape.this, R.raw.beep);
+                mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                    }
+
+                });
+                mp.start();
+            }
+        });
     }
 
     @Override
