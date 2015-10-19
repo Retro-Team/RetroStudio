@@ -1,164 +1,196 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drawer="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#000101"
-    tools:context=".EditorLandscape">
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="com.retroteam.studio.retrostudio.EditorLandscape"
+    android:id="@+id/track_base">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
     <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#27e508"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
         android:textStyle="bold" android:textSize="50sp" android:gravity="center"
-        android:text="@string/dummy_content" />
+        android:alpha="50"
+        android:text="@string/track_text" />
 
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
-    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/track_view" >
 
-        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay" android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-        </LinearLayout>
-
-        <SlidingDrawer
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:content="@+id/note_drawer"
-            android:handle="@+id/handle_notebox"
-            android:id="@+id/slidingDrawer"
-            android:layout_gravity="right|top"
-            android:background="@android:color/transparent"
-            android:topOffset="100dp">
+            android:id="@+id/track_layout0">
 
-            <LinearLayout
-                android:id="@+id/note_drawer"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                style="@style/Theme.AppCompat.Light.DarkActionBar"
-                android:background="@color/foreground_material_dark"
-                android:focusableInTouchMode="false"
-                android:nestedScrollingEnabled="true"
-                android:scrollIndicators="bottom"
-                android:visibility="visible">
+                android:layout_height="wrap_content"
+                android:id="@+id/track_container0"
+                android:background="#79000000"
+                android:fillViewport="false"
+                android:clickable="true"
+                android:outlineProvider="bounds">
 
-                <HorizontalScrollView
-                    android:layout_width="fill_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/horizontalScrollView_notes" >
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:rowCount="1"
+                    android:columnCount="100"
+                    android:id="@+id/track0"
+                    android:background="#79000000">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/notecontainer">
+                        android:text="1"
+                        android:id="@+id/textView2"
+                        android:textAlignment="gravity"
+                        android:textSize="50dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:autoText="false"
+                        android:phoneNumber="false"
+                        android:gravity="center" />
+                </GridLayout>
+            </HorizontalScrollView>
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_container1"
+                android:background="#79000000"
+                android:fillViewport="false"
+                android:clickable="true">
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView2"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:rowCount="1"
+                    android:columnCount="100"
+                    android:id="@+id/track1"
+                    android:background="#79000000">
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView3"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2"
+                        android:id="@+id/textView"
+                        android:textAlignment="gravity"
+                        android:textSize="50dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:autoText="false"
+                        android:phoneNumber="false"
+                        android:gravity="center" />
+                </GridLayout>
+            </HorizontalScrollView>
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView4"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_container2"
+                android:background="#79000000"
+                android:fillViewport="false"
+                android:longClickable="true"
+                android:clickable="true">
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView6"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:rowCount="1"
+                    android:columnCount="100"
+                    android:id="@+id/track2"
+                    android:background="#79000000" >
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView7"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3"
+                        android:id="@+id/textView3"
+                        android:textAlignment="gravity"
+                        android:textSize="50dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:autoText="false"
+                        android:phoneNumber="false"
+                        android:gravity="center" />
+                </GridLayout>
+            </HorizontalScrollView>
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView8"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/track_container3"
+                android:background="#79000000"
+                android:fillViewport="false"
+                android:longClickable="true"
+                android:clickable="true"
+                android:focusable="false">
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView9"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:rowCount="1"
+                    android:columnCount="100"
+                    android:id="@+id/track3"
+                    android:background="#79000000" >
 
-                        <ImageView
-                            android:layout_width="170dp"
-                            android:layout_height="fill_parent"
-                            android:id="@+id/imageView5"
-                            android:contentDescription="@string/note1"
-                            android:src="@android:drawable/ic_lock_silent_mode_off"
-                            android:background="#234bba"
-                            android:paddingLeft="5dp"
-                            android:paddingRight="5dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="4"
+                        android:id="@+id/textView4"
+                        android:textAlignment="gravity"
+                        android:textSize="50dp"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:autoText="false"
+                        android:phoneNumber="false"
+                        android:gravity="center" />
+                </GridLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
 
-                    </LinearLayout>
-                </HorizontalScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/notedrawercontainer">
 
-            </LinearLayout>
+        <hollowsoft.slidingdrawer.SlidingDrawer
+            android:id="@+id/notedrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            drawer:handle="@+id/handle"
+            drawer:content="@+id/content"
+            android:foregroundGravity="top">
 
-            <Button
-                android:id="@+id/handle_notebox"
+            <TextView
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="#01579B"
+                android:gravity="center"
+                android:text="Notes" />
+
+            <HorizontalScrollView
+                android:id="@+id/content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/note_drawer_title" />
-        </SlidingDrawer>
+                android:background="#00ACC1"
+                android:gravity="center" >
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/notecontainer"
+                    android:src="@drawable/note_icon_small"
+                    android:contentDescription="NoteContainer"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+        </hollowsoft.slidingdrawer.SlidingDrawer>
     </FrameLayout>
 
 </FrameLayout>

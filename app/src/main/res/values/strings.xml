@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">Retro Studio</string>
 
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">Tracks View</string>
-    <string name="dummy_note">Note</string>
-    <string name="note_drawer_title">Notes</string>
-    <string name="note1">note_1</string>
-    <string name="track1">t1</string>
+    <string name="title_section1">Projects</string>
+    <string name="title_section2">Saved Songs</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_newsong">New Song</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_editor_landscape">Editor</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_slidenotedrawer">Show/Hide Note Drawer</string>
+    <string name="action_addtrack">Add Track</string>
+
+    <string name="track_text">Tracks</string>
+    <string name="note_handle">Notes</string>
 </resources>
