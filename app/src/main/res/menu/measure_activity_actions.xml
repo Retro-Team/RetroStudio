@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".EditorLandscape">
+    android:showAsAction="always"/>
+    <item android:id="@+id/action_penciloff" android:title="@string/action_penciloff"
+        android:icon="@drawable/settings_icon"
+        android:showAsAction="always" />
+    <item android:id="@+id/action_togglefs" android:title="@string/action_togglefs"
+        android:icon="@drawable/settings_icon"
+        android:showAsAction="never" />
+</menu>

@@ -19,4 +19,18 @@
 
     <string name="track_text">Tracks</string>
     <string name="note_handle">Notes</string>
+
+    <string name="item1">Item 1</string>
+    <string name="item2">Item 2</string>
+    <string name="item3">Item 3</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="action_togglefs">Toggle Full Screen</string>
+    <string name="action_save">Save</string>
+    <string name="action_saveas">Save As...</string>
+    <string name="measures">Measure</string>
+    <string name="action_penciloff">Turn Pencil Off</string>
 </resources>

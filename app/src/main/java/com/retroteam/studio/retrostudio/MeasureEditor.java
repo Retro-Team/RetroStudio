@@ -10,7 +10,9 @@ import android.app.ActionBar;
 import android.app.Activity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +27,7 @@ import android.view.View;
 import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import android.widget.TextView;
@@ -32,46 +35,37 @@ import android.widget.Toast;
 import hollowsoft.slidingdrawer.SlidingDrawer;
 
 
-public class EditorLandscape extends Activity {
-
-    /**
-     * The info that gets passed into the MeasureEditor activity.
-     */
-    public final static String MEASURE_INFO = "com.retroteam.studio.MEASUREINFO";
-
-    public final static String MEASURE_TITLE = "com.retroteam.studio.MEASURETITLE";
+public class MeasureEditor extends Activity {
 
 
+    // note data structure will go here.
     public String[] notes = {"A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G"};
+
+    private boolean pencil = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_editor_landscape);
+        // get the note positions from the intent
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(EditorLandscape.MEASURE_INFO);
+        String titlebar = intent.getStringExtra(EditorLandscape.MEASURE_TITLE);
 
-        // get the song name from the intent
-
-        setupActionBar("test song name"); //cannot use this if we have no action bar
+        setContentView(R.layout.activity_trackedit);
+        setupActionBar(titlebar); //cannot use this if we have no action bar
 
         //final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
 
         //toggleHideyBar(); //start immersive mode
 
-        //check where we're coming from, if we have an intent
-        if (getIntent().getStringExtra("SourceActivity") != null && getIntent() != null) {
-            Intent intent = getIntent();
-            if (intent.getStringExtra("SourceActivity").equals("MainActivity")) {
-                //we're making a new project or coming from the main menu
-                // show a toast
-                String message = intent.getStringExtra(NavigationDrawerFragment.SONG_NAME);
-                Toast.makeText(this, "Created Project '" + message + "'", Toast.LENGTH_SHORT).show();
-            }
-        }
-        //handling from a measure is done in the overloaded OnActivityResult
 
-//        //dynamically fill up note drawer with notes
+
+        // show a toast with the info
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+//        //dynamically fill up the first row of every line with notes
 //        LinearLayout notecontainer = (LinearLayout) findViewById(R.id.notecontainer);
 //        //HorizontalScrollView notecontainer = (HorizontalScrollView) findViewById(R.id.content);
 //
@@ -117,9 +111,9 @@ public class EditorLandscape extends Activity {
     private void setupActionBar(String title) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             // Show the Up button in the action bar.
-            ActionBar editorbar = getActionBar();
-            editorbar.setDisplayHomeAsUpEnabled(true);
-            editorbar.setTitle(title);
+            ActionBar measure = getActionBar();
+            measure.setDisplayHomeAsUpEnabled(true);
+            measure.setTitle("Editing Measure " + title);
 
         }
     }
@@ -128,7 +122,7 @@ public class EditorLandscape extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.editor_activity_actions, menu);
+        inflater.inflate(R.menu.measure_activity_actions, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -150,7 +144,7 @@ public class EditorLandscape extends Activity {
             return true;
         }
 
-        if (id == R.id.action_play || id == R.id.action_settings) {
+        if (id == R.id.action_penciloff) {
             Toast.makeText(this, "Tell Gabe to implement this!", Toast.LENGTH_SHORT).show();
 
         }
@@ -202,28 +196,32 @@ public class EditorLandscape extends Activity {
         this.getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
     }
 
-    public void editMeasure(View view) {
 
-        Intent intent = new Intent(this, MeasureEditor.class);
+    public void togglePencilTool(View view) {
 
-        //will need to be able to pass note and measure information.
-        String msg = "Here's the measure data placeholder";
-        intent.putExtra(MEASURE_INFO, msg);
-        TextView viewt = (TextView) view;
-        intent.putExtra(MEASURE_TITLE, viewt.getText().toString());
-        intent.putExtra("SourceActivity", "EditorLandscape");
-        startActivityForResult(intent, 123);
-    }
+        com.getbase.floatingactionbutton.FloatingActionButton ptool = (com.getbase.floatingactionbutton.FloatingActionButton) view;
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // Check which request we're responding to
-        if (requestCode == 123) {
-            // Make sure the request was successful
-            if (resultCode == RESULT_OK) {
-                // Do something here
-            }
+        if(pencil) {
+            pencil = false;
+            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_on)));
+        } else {
+            pencil = true;
+            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_off)));
         }
     }
 
+    public void paintNote(View view) {
+        com.getbase.floatingactionbutton.FloatingActionButton ptool = (com.getbase.floatingactionbutton.FloatingActionButton) findViewById(R.id.pencilTool);
+        ImageView iview = (ImageView) view;
+        Drawable notestatus = iview.getDrawable();
+        if ( notestatus.getConstantState().equals(getResources().getDrawable(R.drawable.note_filled, getTheme()).getConstantState()) ) {
+            if (pencil){
+                iview.setImageDrawable(getResources().getDrawable(R.drawable.measure_outline, getTheme()));
+            }
+        } else {
+            if (pencil) {
+                iview.setImageDrawable(getResources().getDrawable(R.drawable.note_filled, getTheme()));
+            }
+        }
+    }
 }
