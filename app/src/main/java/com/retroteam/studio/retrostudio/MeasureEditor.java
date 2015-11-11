@@ -203,10 +203,10 @@ public class MeasureEditor extends Activity {
 
         if(pencil) {
             pencil = false;
-            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_on)));
+            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_off)));
         } else {
             pencil = true;
-            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_off)));
+            ptool.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.button_on)));
         }
     }
 

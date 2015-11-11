@@ -311,7 +311,7 @@
                         android:textAlignment="gravity"
                         android:textSize="50dp"
                         android:layout_row="0"
-                        android:layout_column="2"
+                        android:layout_column="3"
                         android:autoText="false"
                         android:phoneNumber="false"
                         android:gravity="center"

@@ -33,4 +33,8 @@
     <string name="action_saveas">Save As...</string>
     <string name="measures">Measure</string>
     <string name="action_penciloff">Turn Pencil Off</string>
+    <string name="time_sig_picker_msg">Choose a time signature.</string>
+    <string name="time_sig_picker_title">Project Creation</string>
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
 </resources>
