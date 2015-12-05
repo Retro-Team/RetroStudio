@@ -1,15 +1,32 @@
+<!--
+  ~ Retro Studio Copyright 2015 Retro Team
+  ~ This file is part of Retro Studio.
+  ~
+  ~ Retro Studio is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Retro Studio is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Retro Studio.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:drawer="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:background="#0099cc"
+    android:layout_height="match_parent" android:background="#1c50cc"
     tools:context="com.retroteam.studio.retrostudio.EditorLandscape"
     android:id="@+id/track_base">
 
     <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
         android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
         android:textStyle="bold" android:textSize="50sp" android:gravity="center"
-        android:alpha="50"
-        android:text="@string/track_text" />
+        android:alpha="50" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,316 +37,21 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/track_layout0">
+            android:id="@+id/track_layout">
 
             <HorizontalScrollView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/track_container0"
-                android:background="#79000000"
-                android:fillViewport="false"
-                android:clickable="true"
-                android:outlineProvider="bounds">
-
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:rowCount="1"
-                    android:columnCount="100"
-                    android:id="@+id/track0"
-                    android:background="#79000000">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="1"
-                        android:id="@+id/textView2"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="1a"
-                        android:id="@+id/textView5"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="1b"
-                        android:id="@+id/textView6"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="2"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="1c"
-                        android:id="@+id/textView8"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="3"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="1d"
-                        android:id="@+id/textView9"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="4"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                </GridLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/track_container1"
-                android:background="#79000000"
-                android:fillViewport="false"
-                android:clickable="true"
-                android:outlineProvider="bounds">
-
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:rowCount="1"
-                    android:columnCount="100"
-                    android:id="@+id/track1"
-                    android:background="#79000000">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="2"
-                        android:id="@+id/textView"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="2a"
-                        android:id="@+id/textView7"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="2b"
-                        android:id="@+id/textView10"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="2"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-                </GridLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/track_container2"
-                android:background="#79000000"
-                android:fillViewport="false"
-                android:longClickable="true"
-                android:clickable="true">
-
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:rowCount="1"
-                    android:columnCount="100"
-                    android:id="@+id/track2"
-                    android:background="#79000000" >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="3"
-                        android:id="@+id/textView3"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="3a"
-                        android:id="@+id/textView11"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="3b"
-                        android:id="@+id/textView14"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="2"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-                </GridLayout>
-            </HorizontalScrollView>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/track_container3"
-                android:background="#79000000"
-                android:fillViewport="false"
-                android:longClickable="true"
-                android:clickable="true"
-                android:focusable="false">
-
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:rowCount="1"
-                    android:columnCount="100"
-                    android:id="@+id/track3"
-                    android:background="#79000000" >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="4"
-                        android:id="@+id/textView4"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="0"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="4a"
-                        android:id="@+id/textView12"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="2"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:text="4b"
-                        android:id="@+id/textView13"
-                        android:textAlignment="gravity"
-                        android:textSize="50dp"
-                        android:layout_row="0"
-                        android:layout_column="3"
-                        android:autoText="false"
-                        android:phoneNumber="false"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:background="@drawable/measure_outline"
-                        android:contextClickable="false"
-                        android:onClick="editMeasure" />
-                </GridLayout>
-            </HorizontalScrollView>
+                android:id="@+id/horizontalScrollView" />
         </LinearLayout>
     </ScrollView>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom"
-        android:id="@+id/notedrawercontainer">
-    </FrameLayout>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_track_menu"
+        android:layout_gravity="center|bottom|right"
+        drawer:fab_expandDirection="left"/>
 
 
 </FrameLayout>

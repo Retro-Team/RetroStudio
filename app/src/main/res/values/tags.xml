@@ -16,15 +16,12 @@
   ~ along with Retro Studio.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<resources>
-
-    <!-- Declare custom theme attributes that allow changing which styles are
-         used for button bars depending on the API level.
-         ?android:attr/buttonBarStyle is new as of API 11 so this is
-         necessary to support previous API levels. -->
-    <declare-styleable name="ButtonBarContainerTheme">
-        <attr name="metaButtonBarStyle" format="reference" />
-        <attr name="metaButtonBarButtonStyle" format="reference" />
-    </declare-styleable>
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="TAG_ROW" type="id"/>
+    <item name="TAG_COLUMN" type="id"/>
+    <item name="TAG_HASNOTES" type="bool"></item>
+    <item name="TAG_GUISNAP" type="id"></item>
+    <item name="TAG_NOTE" type="id"></item>
+    <item name="TAG_GUISNAPRANGE" type="id"></item>
+    <item name="TAG_FILLED_NOTES" type="id"></item>
 </resources>
