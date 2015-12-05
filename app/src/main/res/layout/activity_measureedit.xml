@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Retro Studio Copyright 2015 Retro Team
+  ~ This file is part of Retro Studio.
+  ~
+  ~ Retro Studio is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Retro Studio is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Retro Studio.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c50cc"
+    tools:context="com.retroteam.studio.retrostudio.MeasureEditor">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2" >
+
+        <LinearLayout
+            android:id="@+id/doublescroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:scrollbars="vertical"
+            >
+            <TableLayout
+                android:id="@+id/notes_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:measureWithLargestChild="false">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="C"
+                    android:id="@+id/note_c"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="C#"
+                    android:id="@+id/note_csharp"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="D"
+                    android:id="@+id/note_d"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="D#"
+                    android:id="@+id/note_dsharp"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="E"
+                    android:id="@+id/note_e"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="F"
+                    android:id="@+id/note_f"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="F#"
+                    android:id="@+id/note_fsharp"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="G"
+                    android:id="@+id/note_g"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="G#"
+                    android:id="@+id/note_gsharp"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="A"
+                    android:id="@+id/note_a"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="A#"
+                    android:id="@+id/note_asharp"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="75dp"
+                    android:text="B"
+                    android:id="@+id/note_b"
+                    android:textAlignment="gravity"
+                    android:textSize="50dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:autoText="false"
+                    android:phoneNumber="false"
+                    android:gravity="center"
+                    android:background="#7b000000"
+                    android:onClick="previewNote" />
+            </TableLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/notecontainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/notes_left"
+                >
+                <TableLayout
+                    android:id="@+id/notedraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:clickable="true"
+                    >
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </TableRow>
+
+                </TableLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pencilTool"
+        android:layout_gravity="right|bottom"
+        android:onClick="togglePencilTool"
+        android:adjustViewBounds="false"
+        android:src="@android:drawable/ic_menu_edit" />
+</FrameLayout>
