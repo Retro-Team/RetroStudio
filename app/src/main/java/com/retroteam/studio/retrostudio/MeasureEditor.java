@@ -391,7 +391,7 @@ public class MeasureEditor extends Activity {
      * Toggle the ability to draw notes.
      * @param view
      */
-    private void togglePencilTool(View view) {
+    public void togglePencilTool(View view) {
 
         com.getbase.floatingactionbutton.FloatingActionButton ptool = (com.getbase.floatingactionbutton.FloatingActionButton) view;
 
@@ -549,7 +549,7 @@ public class MeasureEditor extends Activity {
      * Play a short note preview.
      * @param view
      */
-    private void previewNote(View view){
+    public void previewNote(View view){
 
         TextView tv = (TextView) view;
 
