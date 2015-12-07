@@ -609,8 +609,6 @@ public class MeasureEditor extends Activity {
         int noteheight = (int) (75 * dscale + 0.5f);
 
         for (int x = 0; x < notedrawlen; x++) {
-            //TableRow noterow = new TableRow(getApplicationContext());
-            //noterow.setLayoutParams(new TableRow.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             TableRow noterow = (TableRow) notedraw.getChildAt(x);
             List<List<Integer>> rangelist = numNotesFromGuiSnap();
             for (int i = 0; i < rangelist.size(); i++) {
@@ -621,27 +619,8 @@ public class MeasureEditor extends Activity {
                 note.setTag(R.id.TAG_COLUMN, i);
                 note.setTag(R.id.TAG_NOTE, notesdisplay[x]);
 
-//                switch(guiSNAP){
-//                    case 4:
-//                        note.setTag(R.id.TAG_GUISNAPRANGE, guiSNAPRangeFour[i]);
-//                        break;
-//                    case 8:
-//                        note.setTag(R.id.TAG_GUISNAPRANGE, guiSNAPRangeEight[i]);
-//                        break;
-//                    case 16:
-//                        note.setTag(R.id.TAG_GUISNAPRANGE, guiSNAPRangeSixteen[i]);
-//                        break;
-//                    case 32:
-//                        note.setTag(R.id.TAG_GUISNAPRANGE, new int[] {i, i});
-//                        break;
-//                    default:
-//                        note.setTag(R.id.TAG_GUISNAPRANGE, new int[] {i, i});
-//                        break;
-//                }
                 note.setTag(R.id.TAG_GUISNAPRANGE, rangelist.get(i));
 
-                //int[] snaprange =
-                //note.setTag(R.id.TAG_GUISNAPRANGE, getGUISnapRange())
                 note.setImageResource(R.drawable.measure_outline);
                 if(filledNotesFromIntent.size() > 0){
                     for (int z = 0; z < filledNotesFromIntent.size(); z++) {
@@ -653,16 +632,10 @@ public class MeasureEditor extends Activity {
 
 
                 note.setBackgroundColor(getResources().getColor(R.color.note_rest));
-                //note.getLayoutParams().height = 75;
-                //note.getLayoutParams().width = 144;
-                //note.setMaxWidth(144);
-                //note.setMaxHeight(75);
-                //note.setOnClickListener();
+
                 note.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        ///
-                        //int index = (GridLayout) v.getParent().getC
                         paintNote(v);
 
                     }
@@ -670,7 +643,6 @@ public class MeasureEditor extends Activity {
 
                 noterow.addView(note);
             }
-            //notedraw.addView(noterow, x);
         }
     }
 
